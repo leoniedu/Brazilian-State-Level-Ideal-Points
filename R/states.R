@@ -1,10 +1,10 @@
 library(reshape)
-load("dall.RData")
+load("../data/dall.RData")
 
 ## zucco power published estimates
 year <- 2009
 year.pz <- ifelse (year>2005, 2005, year)
-ploc <- read.csv("party.estimates.csv")
+ploc <- read.csv("../data/party.estimates.csv")
 ploc <- ploc[, c("X", paste("party.estimates.", year.pz, sep=''),
                  ##paste("within.survey.ses.", year, sep=''))]
                  paste("within.survey.ses.", year.pz, sep=''))]
